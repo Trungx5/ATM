@@ -1,0 +1,10 @@
+D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\bin\Debug\Playfair cipher Encrypt Decrypt.exe.config
+D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\bin\Debug\Playfair cipher Encrypt Decrypt.exe
+D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\bin\Debug\Playfair cipher Encrypt Decrypt.pdb
+D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.csproj.AssemblyReference.cache
+D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair_cipher_Encrypt_Decrypt.Form1.resources
+D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair_cipher_Encrypt_Decrypt.Properties.Resources.resources
+D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.csproj.GenerateResource.cache
+D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.csproj.CoreCompileInputs.cache
+D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.exe
+D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.pdb
