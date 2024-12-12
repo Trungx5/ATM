@@ -1,0 +1,10 @@
+Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\bin\Debug\RSA cypher ATM.exe.config
+Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\bin\Debug\RSA cypher ATM.exe
+Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\bin\Debug\RSA cypher ATM.pdb
+Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.csproj.AssemblyReference.cache
+Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA_cypher_ATM.Form1.resources
+Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA_cypher_ATM.Properties.Resources.resources
+Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.csproj.GenerateResource.cache
+Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.csproj.CoreCompileInputs.cache
+Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.exe
+Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.pdb
