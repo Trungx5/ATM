@@ -305,5 +305,103 @@ namespace Playfair_cipher_Encrypt_Decrypt
             output += table[X_Second_Char, Y_First_Char];
             return output;
         }
+
+        private void RandomEncryptButton_Click(object sender, EventArgs e)
+        {
+            // Generate a random key
+            string randomKey = GenerateRandomKey();
+
+            // Display the random key
+            TextBoxKey.Text = randomKey;
+
+            // Encrypt the input text using the random key
+            ButtonEncrypt_Click(sender, e);
+        }
+
+        private string GenerateRandomKey()
+        {
+            Random random = new Random();
+            string alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ"; // Exclude 'J'
+            char[] keyArray = new char[25];
+            HashSet<char> usedChars = new HashSet<char>();
+
+            for (int i = 0; i < 25; i++)
+            {
+                char randomChar;
+                do
+                {
+                    randomChar = alphabet[random.Next(alphabet.Length)];
+                } while (usedChars.Contains(randomChar));
+
+                keyArray[i] = randomChar;
+                usedChars.Add(randomChar);
+            }
+
+            return new string(keyArray);
+        }
+
+        private void Encrypt_Random_All_Click(object sender, EventArgs e)
+        {
+            // Generate a random plaintext
+            string randomPlaintext = GenerateRandomPlaintext();
+
+            // Generate a random key
+            string randomKey = GenerateRandomKey();
+
+            // Display the random plaintext and key
+            RichTextBoxInput.Text = randomPlaintext;
+            TextBoxKey.Text = randomKey;
+
+            // Encrypt the random plaintext using the random key
+            char[,] playfairtable = GeneratePlayFairTable(randomKey);
+            DisplayTable(playfairtable);
+
+            string input = "";
+            foreach (char x in randomPlaintext)
+            {
+                if (char.IsLetter(x))
+                {
+                    input += char.ToUpper(x);
+                }
+            }
+
+            // Insert X between double letters
+            for (int i = 0; i < input.Length; i = i + 2)
+            {
+                if (((i + 2) < input.Length) && (input[i] == input[i + 1]))
+                {
+                    input = input.Insert(i + 1, "X");
+                }
+            }
+
+            // Split into pairs and encrypt
+            RichTextBoxOutput.Text = "";
+            foreach (string s in SplitStrings(input, 2))
+            {
+                if (s.Length == 1)
+                {
+                    RichTextBoxOutput.Text += Encrypt(s + "X", playfairtable);
+                }
+                else
+                {
+                    RichTextBoxOutput.Text += Encrypt(s, playfairtable);
+                }
+            }
+        }
+
+        private string GenerateRandomPlaintext()
+        {
+            Random random = new Random();
+            string alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ"; // Exclude 'J'
+            int length = random.Next(10, 20); // Random length between 10 and 20
+            char[] plaintextArray = new char[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                plaintextArray[i] = alphabet[random.Next(alphabet.Length)];
+            }
+
+            return new string(plaintextArray);
+        }
     }
 }

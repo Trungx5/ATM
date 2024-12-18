@@ -42,20 +42,22 @@
             this.ButtonDecrypt = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.RandomEncryptButton = new System.Windows.Forms.Button();
+            this.Encrypt_Random_All = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewTable)).BeginInit();
             this.SuspendLayout();
             // 
             // RichTextBoxOutput
             // 
-            this.RichTextBoxOutput.Location = new System.Drawing.Point(85, 270);
+            this.RichTextBoxOutput.Location = new System.Drawing.Point(419, 53);
             this.RichTextBoxOutput.Name = "RichTextBoxOutput";
-            this.RichTextBoxOutput.Size = new System.Drawing.Size(638, 149);
+            this.RichTextBoxOutput.Size = new System.Drawing.Size(296, 143);
             this.RichTextBoxOutput.TabIndex = 0;
             this.RichTextBoxOutput.Text = "";
             // 
             // RichTextBoxInput
             // 
-            this.RichTextBoxInput.Location = new System.Drawing.Point(85, 39);
+            this.RichTextBoxInput.Location = new System.Drawing.Point(7, 53);
             this.RichTextBoxInput.Name = "RichTextBoxInput";
             this.RichTextBoxInput.Size = new System.Drawing.Size(296, 145);
             this.RichTextBoxInput.TabIndex = 1;
@@ -64,9 +66,9 @@
             // 
             // ButtonEncrypt
             // 
-            this.ButtonEncrypt.Location = new System.Drawing.Point(329, 204);
+            this.ButtonEncrypt.Location = new System.Drawing.Point(7, 204);
             this.ButtonEncrypt.Name = "ButtonEncrypt";
-            this.ButtonEncrypt.Size = new System.Drawing.Size(75, 23);
+            this.ButtonEncrypt.Size = new System.Drawing.Size(143, 23);
             this.ButtonEncrypt.TabIndex = 3;
             this.ButtonEncrypt.Text = "Encrypt";
             this.ButtonEncrypt.UseVisualStyleBackColor = true;
@@ -74,7 +76,7 @@
             // 
             // TextBoxKey
             // 
-            this.TextBoxKey.Location = new System.Drawing.Point(308, 233);
+            this.TextBoxKey.Location = new System.Drawing.Point(256, 311);
             this.TextBoxKey.Name = "TextBoxKey";
             this.TextBoxKey.Size = new System.Drawing.Size(219, 20);
             this.TextBoxKey.TabIndex = 5;
@@ -82,7 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(262, 236);
+            this.label1.Location = new System.Drawing.Point(225, 314);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 6;
@@ -97,7 +99,7 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.DataGridViewTable.Location = new System.Drawing.Point(454, 39);
+            this.DataGridViewTable.Location = new System.Drawing.Point(221, 337);
             this.DataGridViewTable.Name = "DataGridViewTable";
             this.DataGridViewTable.Size = new System.Drawing.Size(269, 145);
             this.DataGridViewTable.TabIndex = 7;
@@ -134,9 +136,9 @@
             // 
             // ButtonDecrypt
             // 
-            this.ButtonDecrypt.Location = new System.Drawing.Point(442, 204);
+            this.ButtonDecrypt.Location = new System.Drawing.Point(419, 202);
             this.ButtonDecrypt.Name = "ButtonDecrypt";
-            this.ButtonDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.ButtonDecrypt.Size = new System.Drawing.Size(143, 23);
             this.ButtonDecrypt.TabIndex = 8;
             this.ButtonDecrypt.Text = "Decrypt";
             this.ButtonDecrypt.UseVisualStyleBackColor = true;
@@ -145,26 +147,50 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(206, 9);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(83, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(145, 33);
             this.label2.TabIndex = 9;
             this.label2.Text = "Plain Text";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(365, 422);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(484, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(154, 31);
             this.label3.TabIndex = 10;
             this.label3.Text = "Cipher Text";
+            // 
+            // RandomEncryptButton
+            // 
+            this.RandomEncryptButton.Location = new System.Drawing.Point(7, 233);
+            this.RandomEncryptButton.Name = "RandomEncryptButton";
+            this.RandomEncryptButton.Size = new System.Drawing.Size(143, 23);
+            this.RandomEncryptButton.TabIndex = 12;
+            this.RandomEncryptButton.Text = "Encrypt_Random_Button";
+            this.RandomEncryptButton.UseVisualStyleBackColor = true;
+            this.RandomEncryptButton.Click += new System.EventHandler(this.RandomEncryptButton_Click);
+            // 
+            // Encrypt_Random_All
+            // 
+            this.Encrypt_Random_All.Location = new System.Drawing.Point(7, 262);
+            this.Encrypt_Random_All.Name = "Encrypt_Random_All";
+            this.Encrypt_Random_All.Size = new System.Drawing.Size(143, 23);
+            this.Encrypt_Random_All.TabIndex = 13;
+            this.Encrypt_Random_All.Text = "Encrypt_Random_All";
+            this.Encrypt_Random_All.UseVisualStyleBackColor = true;
+            this.Encrypt_Random_All.Click += new System.EventHandler(this.Encrypt_Random_All_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(727, 488);
+            this.Controls.Add(this.Encrypt_Random_All);
+            this.Controls.Add(this.RandomEncryptButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ButtonDecrypt);
@@ -198,6 +224,8 @@
         private System.Windows.Forms.Button ButtonDecrypt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button RandomEncryptButton;
+        private System.Windows.Forms.Button Encrypt_Random_All;
     }
 }
 
