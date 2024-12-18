@@ -8,3 +8,13 @@ D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decr
 D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.csproj.CoreCompileInputs.cache
 D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.exe
 D:\Tai_Lieu_Hoc\VisualStudioProjects\LAbsauna\LAB01\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.pdb
+C:\Users\ADMIN\Source\Repos\Trungx5\ATM\BAI4.2_4.1Playfair cipher Encrypt Decrypt\Playfair cipher Encrypt Decrypt\bin\Debug\Playfair cipher Encrypt Decrypt.exe.config
+C:\Users\ADMIN\Source\Repos\Trungx5\ATM\BAI4.2_4.1Playfair cipher Encrypt Decrypt\Playfair cipher Encrypt Decrypt\bin\Debug\Playfair cipher Encrypt Decrypt.exe
+C:\Users\ADMIN\Source\Repos\Trungx5\ATM\BAI4.2_4.1Playfair cipher Encrypt Decrypt\Playfair cipher Encrypt Decrypt\bin\Debug\Playfair cipher Encrypt Decrypt.pdb
+C:\Users\ADMIN\Source\Repos\Trungx5\ATM\BAI4.2_4.1Playfair cipher Encrypt Decrypt\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Source\Repos\Trungx5\ATM\BAI4.2_4.1Playfair cipher Encrypt Decrypt\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair_cipher_Encrypt_Decrypt.Form1.resources
+C:\Users\ADMIN\Source\Repos\Trungx5\ATM\BAI4.2_4.1Playfair cipher Encrypt Decrypt\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair_cipher_Encrypt_Decrypt.Properties.Resources.resources
+C:\Users\ADMIN\Source\Repos\Trungx5\ATM\BAI4.2_4.1Playfair cipher Encrypt Decrypt\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.csproj.GenerateResource.cache
+C:\Users\ADMIN\Source\Repos\Trungx5\ATM\BAI4.2_4.1Playfair cipher Encrypt Decrypt\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Source\Repos\Trungx5\ATM\BAI4.2_4.1Playfair cipher Encrypt Decrypt\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.exe
+C:\Users\ADMIN\Source\Repos\Trungx5\ATM\BAI4.2_4.1Playfair cipher Encrypt Decrypt\Playfair cipher Encrypt Decrypt\obj\Debug\Playfair cipher Encrypt Decrypt.pdb

@@ -40,29 +40,13 @@ namespace Playfair_cipher_Encrypt_Decrypt
                 }
             }
 
-            bool containsI = false;
-            bool containsJ = false;
-            foreach (char x in input)
-            {
-                if (x == 'I')
-                {
-                    containsI = true;
-                    if (containsJ)
-                    {
-                        MessageBox.Show("I and J cannot be in the same plaintext");
-                        return;
-                    }
-                }
-                if (x == 'J')
-                {
-                    containsJ = true;
-                    if (containsI)
-                    {
-                        MessageBox.Show("I and J cannot be in the same plaintext");
-                        return;
-                    }
-                }
+            bool containsI = input.Contains('I');
+            bool containsJ = input.Contains('J');
 
+            if (containsI && containsJ)
+            {
+                MessageBox.Show("I and J cannot be in the same plaintext");
+                return;
             }
 
             //insert X between double letters
@@ -78,7 +62,7 @@ namespace Playfair_cipher_Encrypt_Decrypt
             RichTextBoxOutput.Text = "";
             foreach (string s in SplitStrings(input, 2))
             {
-                if(s.Length == 1)
+                if (s.Length == 1)
                 {
                     RichTextBoxOutput.Text += Encrypt(s + "X", playfairtable);
                     //continue;
@@ -95,7 +79,7 @@ namespace Playfair_cipher_Encrypt_Decrypt
                 DataGridViewTable.Rows.Add();
                 for (int j = 0; j < table.GetLength(1); j++)
                 {
-                    DataGridViewTable.Rows[i].Cells[j].Value = table[i, j];     
+                    DataGridViewTable.Rows[i].Cells[j].Value = table[i, j];
                 }
             }
         }
@@ -120,7 +104,7 @@ namespace Playfair_cipher_Encrypt_Decrypt
                 output += table[(X_First_Char + 1) % 5, Y_First_Char];
                 output += table[(X_Second_Char + 1) % 5, Y_Second_Char];
                 return output;
-                
+
             }
 
             //if both char are in the same row
@@ -160,7 +144,7 @@ namespace Playfair_cipher_Encrypt_Decrypt
             // split string every x characters
             for (int i = 0; i < input.Length; i += x)
             {
-                if(i + x >= input.Length)
+                if (i + x >= input.Length)
                 {
                     output.Add(input.Substring(i, input.Length - i));
                     break;
@@ -189,7 +173,6 @@ namespace Playfair_cipher_Encrypt_Decrypt
 
             key = key.Distinct().ToList();
             char[,] playfairtable = new char[5, 5];
-
 
             // add the rest of the alphabet
             char character = 'A';
@@ -288,7 +271,7 @@ namespace Playfair_cipher_Encrypt_Decrypt
                 {
                     X_Second_Char_New_Pos += 5;
                 }
-                output += table[X_First_Char_New_Pos , Y_First_Char];
+                output += table[X_First_Char_New_Pos, Y_First_Char];
                 output += table[X_Second_Char_New_Pos, Y_Second_Char];
                 return output;
 
@@ -301,12 +284,12 @@ namespace Playfair_cipher_Encrypt_Decrypt
 
                 int Y_First_Char_New_Pos = Y_First_Char - 1;
                 int Y_Second_Char_New_Pos = Y_Second_Char - 1;
-                
+
                 if (Y_First_Char_New_Pos < 0)
                 {
                     Y_First_Char_New_Pos += 5;
                 }
-                
+
                 if (Y_Second_Char_New_Pos < 0)
                 {
                     Y_Second_Char_New_Pos += 5;
