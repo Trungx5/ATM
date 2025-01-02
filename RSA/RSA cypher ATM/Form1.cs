@@ -19,12 +19,34 @@ namespace RSA_cypher_ATM
             InitializeComponent();
         }
 
-        private void ButtonGenerate_Click(object sender, EventArgs e)
+        private void ButtonGenerate_Click(object sender, EventArgs ev)
         {
+            if (checkInput(TextBoxP.Text) || checkInput(TextboxQ.Text) || checkInput(TextboxE.Text))
+            {
+                MessageBox.Show("Input should not contain letters. Please enter valid numeric values.");
+                if (checkInput(TextBoxP.Text)){
+
+                    TextBoxP.Clear();
+                }
+                if (checkInput(TextBoxP.Text)){
+
+                    TextboxQ.Clear();
+                }
+                if (checkInput(TextBoxP.Text)){
+
+                    TextboxE.Clear();
+                }
+
+                return;
+            }
             if (!(TextBoxP.Text == "") && !(TextboxQ.Text == "") && !(TextboxE.Text == "") 
                 && CheckValid(BigInteger.Parse(TextBoxP.Text), BigInteger.Parse(TextboxQ.Text), BigInteger.Parse(TextboxE.Text)))
             {
-                TextBoxD.Text = GenerateD(BigInteger.Parse(TextboxE.Text), (BigInteger.Parse(TextBoxP.Text) -1) *(BigInteger.Parse(TextboxQ.Text) - 1)).ToString();
+                BigInteger p = BigInteger.Parse(TextBoxP.Text);
+                BigInteger q = BigInteger.Parse(TextboxQ.Text);
+                BigInteger e = BigInteger.Parse(TextboxE.Text);
+                BigInteger n= p * q;
+                TextBoxD.Text = GenerateD(p,q,e).ToString();
             }
             else
             {
@@ -34,9 +56,14 @@ namespace RSA_cypher_ATM
                 }
                 catch
                 {
-                    ButtonGenerate_Click(sender, e);
+                    ButtonGenerate_Click(sender, ev);
                 }
             }
+        }
+
+        static bool checkInput(string input)
+        {
+            return input.Any(char.IsLetter);
         }
 
         private void GenerateParameters()
@@ -64,16 +91,23 @@ namespace RSA_cypher_ATM
                 e = random.Next();
             }
 
-            BigInteger d = GenerateD(e, phi);
+            BigInteger d = GenerateD(p,q,e);
 
             TextBoxP.Text = p.ToString();
             TextboxQ.Text = q.ToString();
             TextboxE.Text = e.ToString();
             TextBoxD.Text = d.ToString();
+
+            textBoxPublicKey.Text = "(" + n + "," + TextboxE.Text + ")";
+            textBoxPrivateKey.Text = "(" + n + "," + TextBoxD.Text + ")";
         }
 
-        private BigInteger GenerateD(BigInteger e, BigInteger phi)
+        private BigInteger GenerateD(BigInteger p,BigInteger q, BigInteger e)
         {
+
+            BigInteger n = p * q;
+            BigInteger phi = (p - 1) * (q - 1);
+
             BigInteger d = modInverse(e, phi);
             return d;
         }
@@ -205,6 +239,90 @@ namespace RSA_cypher_ATM
                     }
                 }
             }
+        }
+
+        private void pButtonGenerate_Click(object sender, EventArgs e)
+        {
+            BigInteger p = random.Next();
+
+            while (!isPrime(p))
+            {
+                p = random.Next();
+            }
+            TextBoxP.Text = p.ToString();
+        }
+
+        private void qButtonGenerate_Click(object sender, EventArgs e)
+        {
+            BigInteger q = random.Next();
+
+            while (!isPrime(q))
+            {
+                q = random.Next();
+            }
+            TextboxQ.Text = q.ToString();
+        }
+
+        private void eButtonGenerate_Click(object sender, EventArgs ev)
+        {
+            BigInteger e = random.Next();
+
+            while (!isPrime(e))
+            {
+                e = random.Next();
+            }
+            TextboxE.Text = e.ToString();
+        }
+
+        private void dButtonGenerate_Click(object sender, EventArgs ev)
+        {
+            if (TextBoxP.Text == "" || TextboxQ.Text == "" || TextboxE.Text == "")
+            {
+                MessageBox.Show("Please generate parameters");
+                return;
+            }
+            if (checkInput(TextBoxP.Text) || checkInput(TextboxQ.Text) || checkInput(TextboxE.Text))
+            {
+                MessageBox.Show("Input should not contain letters. Please enter valid numeric values.");
+                if (checkInput(TextBoxP.Text))
+                {
+
+                    TextBoxP.Clear();
+                }
+                if (checkInput(TextBoxP.Text))
+                {
+
+                    TextboxQ.Clear();
+                }
+                if (checkInput(TextBoxP.Text))
+                {
+
+                    TextboxE.Clear();
+                }
+
+                return;
+            }
+            BigInteger p = BigInteger.Parse(TextBoxP.Text);
+            BigInteger q = BigInteger.Parse(TextboxQ.Text);
+            BigInteger e = BigInteger.Parse(TextboxE.Text);
+
+            BigInteger n = p * q;
+            TextBoxD.Text = GenerateD(p, q, e).ToString();
+            textBoxPublicKey.Text = "(" + n + "," + TextboxE.Text + ")";
+            textBoxPrivateKey.Text = "(" + n +","+ TextBoxD.Text + ")";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TextBoxP.Clear();
+            TextboxQ.Clear();
+            TextboxE.Clear();
+            TextBoxD.Clear();
+            textBoxPublicKey.Clear();
+            textBoxPrivateKey.Clear();
+            RichTextBoxInput.Clear();
+            RichTextBoxOutput.Clear();
+
         }
     }
 }

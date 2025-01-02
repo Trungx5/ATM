@@ -8,3 +8,13 @@ Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.csproj.GenerateRe
 Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.csproj.CoreCompileInputs.cache
 Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.exe
 Z:\trans\ATM\LAB02\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.pdb
+D:\Downloads\ATM\RSA\RSA cypher ATM\bin\Debug\RSA cypher ATM.exe.config
+D:\Downloads\ATM\RSA\RSA cypher ATM\bin\Debug\RSA cypher ATM.exe
+D:\Downloads\ATM\RSA\RSA cypher ATM\bin\Debug\RSA cypher ATM.pdb
+D:\Downloads\ATM\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.csproj.AssemblyReference.cache
+D:\Downloads\ATM\RSA\RSA cypher ATM\obj\Debug\RSA_cypher_ATM.Form1.resources
+D:\Downloads\ATM\RSA\RSA cypher ATM\obj\Debug\RSA_cypher_ATM.Properties.Resources.resources
+D:\Downloads\ATM\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.csproj.GenerateResource.cache
+D:\Downloads\ATM\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.csproj.CoreCompileInputs.cache
+D:\Downloads\ATM\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.exe
+D:\Downloads\ATM\RSA\RSA cypher ATM\obj\Debug\RSA cypher ATM.pdb
